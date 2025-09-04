@@ -1,0 +1,25 @@
+server:
+  port: 8080
+
+google:
+  client-id: 804896828512-7v3h420lajnoluqjkb0fh4hbq4g17qbq.apps.googleusercontent.com:changeme.apps.googleusercontent.com}
+
+app:
+  storage:
+    bucket: ${GCS_BUCKET:your-bucket}
+  cors:
+    allowed-origins: "http://localhost:4200"
+  gcp:
+    project-id: kalmy-9daf2
+    credentials:
+      location: classpath:kalmy-9daf2-firebase-adminsdk-fbsvc-4f441f4e18.json
+
+spring:
+  profiles:
+    active: dev
+
+openapi:
+  local-url: ${OPENAPI_LOCAL_URL:http://localhost:8080}
+  dev-url: ${OPENAPI_DEV_URL:https://dev.api.tu-dominio.com}
+# src/main/resources/application.yml
+
